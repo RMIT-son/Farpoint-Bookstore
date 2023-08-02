@@ -4,6 +4,22 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+  font-weight: ;
+}
+h1.logo {
+  color: #e6cfcf;
+  font-weight: normal;
+}
+
+.logo img,
+.logo div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+img {
+  width: 50px;
+  height: 50px;
 }
 
 header {
@@ -21,7 +37,7 @@ header {
 }
 
 .nav-toggle:focus~.nav-toggle-label {
-  outline: 3px solid rgba(lightblue, .75);
+  outline: 3px solid rgba(#fff, .75);
 }
 
 .nav-toggle-label {
@@ -115,7 +131,7 @@ nav li {
 }
 
 nav a {
-  color: rgb(230, 207, 207);
+  color: #e6cfcf;
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -124,7 +140,7 @@ nav a {
 }
 
 nav a:hover {
-  color: rgb(230, 207, 207);
+  color: #e6cfcf;
 }
 
 .nav-toggle:checked~nav {
@@ -201,8 +217,8 @@ nav a:hover {
 }
 /* Animate the burger icon to a close icon when the menu is open */
 .nav-toggle:checked ~ .nav-toggle-label span{
-  background: rgb(63,94,251);
-  background: linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  background: rgb(27, 28, 30);
+  display: block;
 }
 
 .nav-toggle:checked ~ .nav-toggle-label span::before {
@@ -222,12 +238,12 @@ nav a:hover {
 }
 
 
-
  /* Your existing CSS code for the navigation bar */
 body {
   margin: 0;
   padding: 0;
   font-family: 'MuseoModerno', cursive;
+  font-family: 'Tilt Neon', cursive;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -285,10 +301,17 @@ border-radius: 5px;
       flex-direction: column;
       padding: 0px 30px;
     }
-
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
   .product {
   width: 100%;
   margin-bottom: 40px;
+  }
+
+  .logo div {
+    display: none;
   }
 }
 
