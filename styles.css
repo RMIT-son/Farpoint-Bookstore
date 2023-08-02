@@ -207,14 +207,12 @@ nav a:hover {
 
 .nav-toggle:checked ~ .nav-toggle-label span::before {
   content: "";
-  background-color: red;
   transform: rotateZ(30deg);
   left: 10%;
 }
 
 .nav-toggle:checked ~ .nav-toggle-label span::after {
   content: "";
-  background-color: red;
   transform: rotateZ(-30deg);
   left: 10%;
 }
