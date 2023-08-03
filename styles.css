@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: #e6cfcf;
+}
+
 h1.logo {
   color: #e6cfcf;
   font-weight: normal;
@@ -243,8 +248,11 @@ body {
 /* Responsive 1-column Layout */
 @media only screen and (max-width: 768px) {
   
-  header {
-    background-color: r;
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
   .logo img {
@@ -262,9 +270,12 @@ body {
     flex-wrap: wrap;
     padding: 0px 10px;
     align-items: center;
+    justify-items: center;
+    text-align: center;
   }
   
   .book-list {
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 0px 10px;
@@ -338,6 +349,7 @@ body {
 
 .book-box h1 {
   font-family: 'Tilt Neon', cursive;
+  color: #e6cfcf;
   font-size: 40px;
   font-weight: normal;
   text-align: center;
@@ -348,7 +360,7 @@ body {
 
 .book-box h1::before {
   content: '';
-  display: block;
+  display: grid;
   height: 5px;
   background: #e6cfcf;
   position: absolute;
@@ -379,6 +391,14 @@ body {
 
 .book-item:hover img {
   transform: translateY(-20px);
+}
+
+.book-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 footer {

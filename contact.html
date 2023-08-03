@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farpoint Bookstore</title>
+  <title>Contact Us</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contact&book.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Tilt+Neon&display=swap" rel="stylesheet">
@@ -44,63 +45,48 @@
     </label>
 </header>
 
-  <div class="book-box">
-    <a href="fiction.html"><h1>FICTION</h1></a>
-    <div class="book-list">
-      <div class="book-item">
-        <a href="book_pages/fiction/Dune.html">
-          <img src="images/books/dune/dune-main.png" alt="Dune Main Cover Page">
-          <h3>DUNE</h3>
-        </a>
-        <p>Frank Herbert</p>
-      </div>
-      <div class="book-item">
-        <a href="book_pages/fiction/FFA.html">
-          <img src="images/books/FFA/FFA-main.jpg" alt="Flowers for Algernon Cover Page">
-          <h3>Flowers for Algernon</h3>
-        </a>
-        <p>Daniel Keyes</p>
-      </div>
-      <div class="book-item">
-        <a href="book_pages/fiction/TS.html">
-          <img src="images/books/TS/TS-main.jpg" alt="Translation State Cover Page">
-          <h3>Translation State</h3>
-        </a>
-        <p>Ann Leckie</p>
-      </div>
-    </div>
-  </div>
+  <form action="submit-form.php" method="post">
+  <label for="contact-purpose">Contact Purpose:</label>
+  <select id="contact-purpose" name="contact-purpose">
+    <option value="sell-books">I want to sell books</option>
+    <option value="buy-books">I want to buy books</option>
+  </select>
+  <br>
 
-  <div class="book-box">
-    <a href="science.html"><h1>SCIENCE</h1></a>
-      <div class="book-list">
-        <div class="book-item">
-          <a href="book_pages/science/cosmos.html">
-            <img src="images/books/cosmos/cosmos-main.jpg" alt="Cosmos Cover Page">
-            <h3>Cosmos</h3>
-          </a>
-          <p>Carl Sagan</p>
-        </div>
-        <div class="book-item">
-          <a href="book_pages/science/ABHT.html">
-            <img src="images/books/ABHT/ABHT-main.jpg" alt="A Brief History of Time Cover Page">
-            <h3>A Brief History of Time</h3>
-          </a>
-          <p>Stephen Hawking</p>
-        </div>
-        <div class="book-item">
-          <a href="book_pages/science/OMU.html">
-            <img src="images/books/OMU/OMU-main.jpg" alt="Our Mathematical Universe Cover Page">
-            <h3>Our Mathematical Universe</h3>
-          </a>
-          <p>Max Tegmark</p>
-      </div>
-    </div>
-  </div>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  <br>
 
-  <div class="book-box">
-    <h1>MORE CATEGORIES</h1>
-  </div>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br>
+
+  <label for="phone">Phone:</label>
+  <input type="tel" id="phone" name="phone" required>
+  <br>
+
+  <label>Contact Preference:</label>
+  <input type="checkbox" id="email-preference" name="contact-preference[]" value="email" checked>
+  <label for="email-preference">By email</label>
+  <input type="checkbox" id="phone-preference" name="contact-preference[]" value="phone">
+  <label for="phone-preference">By phone</label>
+  <br>
+
+  <label>Receive weekly newsletter:</label>
+  <input type="radio" id="yes-newsletter" name="newsletter" value="yes" checked>
+  <label for="yes-newsletter">Yes</label>
+  <input type="radio" id="no-newsletter" name="newsletter" value="no">
+  <label for="no-newsletter">No</label>
+  <br>
+
+  <label for="extra-notes">Extra Notes:</label>
+  <textarea id="extra-notes" name="extra-notes"></textarea>
+  <br>
+
+  <input type="submit" value="Submit">
+  <input type="reset" value="Reset">
+</form>
+
 
   <footer>
     <div class="footer-container">
