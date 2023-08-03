@@ -387,8 +387,8 @@ footer p {
 }
 
 html {
-  background: linear-gradient(253.56deg, #FFAAE2 3.05%, #2C008A 94.6%), radial-gradient(100% 246.94% at 100% 100%, #FFFFFF 0%, #000353 100%), linear-gradient(121.18deg, #1400FF 0.45%, #3A0000 100%), linear-gradient(341.1deg, #F3D0FC 7.52%, #1700A4 77.98%), linear-gradient(222.34deg, #CF0C00 12.99%, #00574D 87.21%), linear-gradient(150.76deg, #B7D500 15.35%, #2200AA 89.57%);
-  background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+  background: linear-gradient(114.95deg, rgba(235, 0, 255, 0.5) 0%, rgba(0, 71, 255, 0) 34.35%), linear-gradient(180deg, #004B5B 0%, #FFA7A7 100%), linear-gradient(244.35deg, #FFB26A 0%, #3676B1 50.58%, #00A3FF 100%), linear-gradient(244.35deg, #FFFFFF 0%, #004A74 49.48%, #FF0000 100%), radial-gradient(100% 233.99% at 0% 100%, #B70000 0%, #AD00FF 100%), linear-gradient(307.27deg, #219D87 0.37%, #2650BA 50.19%, #2800C6 100%), radial-gradient(100% 140% at 100% 0%, #FF00C7 0%, #006C7A 49.48%, #760000 100%);
+  background-blend-mode: hard-light, overlay, overlay, overlay, difference, difference, normal;
   overflow: auto;
 }
 
