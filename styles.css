@@ -1,11 +1,7 @@
-:root {
-  --background:
+*, *::before, *::after {
+
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  font-weight: ;
-}
 h1.logo {
   color: #e6cfcf;
   font-weight: normal;
@@ -23,7 +19,7 @@ img {
 }
 
 header {
-  background: var(--background);
+  font-family: 'Tilt Neon', cursive;
   text-align: center;
   position: sticky;
   z-index: 999;
@@ -112,11 +108,10 @@ nav {
   text-align: left;
   top: 100%;
   left: 0;
-  background: var(--background);
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
-  transition: transform 400ms ease-in-out;
+  transition: transform 400ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 nav ul {
@@ -202,12 +197,13 @@ nav a:hover {
        content: '';
        display: block;
        height: 5px;
-       background: beige;
+       background: #e6cfcf ;
        position: absolute;
        bottom: -.75em;
        left: 0;
        right: 0;
        transform: scale(0, 1);
+       border-radius: 5px;
        transition: transform ease-in-out 250ms;
   }
 
@@ -233,85 +229,61 @@ nav a:hover {
   left: 10%;
 }
 
-.nav-toggle:checked ~ .nav-toggle-label {
-  transition: all 0.5s var(--animation-curve);
-}
 
 
  /* Your existing CSS code for the navigation bar */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'MuseoModerno', cursive;
-  font-family: 'Tilt Neon', cursive;
+  font-family: 'Raleway', sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
+  color: #e6cfcf;
 }
 
-/* 3-column Layout */
-h1 {
-  text-align: center;
-}
-
-.container-1 {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-}
-
-.product {
-width: calc(33.33% - 40px);
-margin-bottom: 40px;
-}
-
-.product img {
-width: 100%;
-height: auto;
-}
-
-.product h2 {
-font-size: 24px;
-margin: 20px 0 10px;
-}
-
-.product p {
-font-size: 18px;
-line-height: 1.5;
-margin-bottom: 20px;
-}
-
-button {
-background-color: #4CAF50;
-border: none;
-color: white;
-padding: 10px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-margin-top: 10px;
-cursor: pointer;
-border-radius: 5px;
-}
 
 /* Responsive 1-column Layout */
 @media only screen and (max-width: 768px) {
-  .container-1 {
-      flex-direction: column;
-      padding: 0px 30px;
-    }
-  .logo img {
-    width: 100px;
-    height: auto;
+  
+  header {
+    background-color: r;
   }
-  .product {
-  width: 100%;
-  margin-bottom: 40px;
+  
+  .logo img {
+    width: 60px;
+    height: auto;
   }
 
   .logo div {
     display: none;
+  }
+
+  .book-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0px 10px;
+    align-items: center;
+  }
+  
+  .book-list {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0px 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .book-item {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .book-item img {
+    width: 100% !important;
+    height: auto;
   }
 }
 
@@ -349,8 +321,33 @@ border-radius: 5px;
   font-size: 18px;
 }
 
+.book-box {
+  padding: 20px;
+  margin: 20px 0;
+  display: flexbox;
+}
+.book-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.book-item {
+  width: calc(33.33% - 40px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.book-item img {
+  width: 50%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.book-item:hover img {
+  transform: translateY(-20px);
+}
 
 footer {
+  font-family: 'Tilt Neon', cursive;
   background-color: #333;
   color: #fff;
   padding: 20px 0;
@@ -390,9 +387,9 @@ footer p {
 }
 
 html {
-  height: 100%;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  overflow: hidden;
+  background: linear-gradient(253.56deg, #FFAAE2 3.05%, #2C008A 94.6%), radial-gradient(100% 246.94% at 100% 100%, #FFFFFF 0%, #000353 100%), linear-gradient(121.18deg, #1400FF 0.45%, #3A0000 100%), linear-gradient(341.1deg, #F3D0FC 7.52%, #1700A4 77.98%), linear-gradient(222.34deg, #CF0C00 12.99%, #00574D 87.21%), linear-gradient(150.76deg, #B7D500 15.35%, #2200AA 89.57%);
+  background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+  overflow: auto;
 }
 
 #stars {
