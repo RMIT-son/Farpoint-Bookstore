@@ -163,8 +163,6 @@ nav a:hover {
   }
 
   nav {
-       /* all: unset; <=  problème dans Edge qui ne supporte pas */
-       /* les lignes qui suivent sont supportées par Edge */
        position: relative;
        text-align: left;
        transition: none;
@@ -172,8 +170,6 @@ nav a:hover {
        background: none;
        top: initial;
        left: initial;
-       /* fin du Edge support */
-
        grid-column: 3 / 4;
        display: flex;
        justify-content: flex-end;
@@ -230,9 +226,13 @@ nav a:hover {
   left: 10%;
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px){
+  nav {
+    padding-right: 2em;
+    width: auto;
+  }
+}
 
-
- /* Your existing CSS code for the navigation bar */
 body {
   margin: 0;
   padding: 0;
@@ -248,11 +248,24 @@ body {
 /* Responsive 1-column Layout */
 @media only screen and (max-width: 768px) {
   
-  footer ul {
+  .footer-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    padding: 0 !important;
+  }
+
+  footer h3 {
+    margin-left: 0 !important;
+  }
+  
+  .footer-links {
+    justify-self: center;
+    justify-content: center;
+    margin: auto !important;
+    padding-inline-start: 0px;
   }
   
   .logo img {

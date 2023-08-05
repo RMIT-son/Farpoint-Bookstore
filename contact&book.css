@@ -2,7 +2,6 @@
 label {
   display: block;
   margin-bottom: 5px;
-  font-weight: ;
 }
 
 /* Style the form inputs */
@@ -19,6 +18,9 @@ textarea {
   margin-bottom: 10px;
 }
 
+textarea[name="extra-notes"] {
+  width: 100%;
+}
 
 /* Style the form select */
 select {
@@ -80,10 +82,12 @@ label[for="no-newsletter"] {
 .name-email-container {
   display: flex;
   flex-direction: row;
-  justify-self: space-between;
   align-items: center;
-  margin-bottom: 10px;
-  gap: 20px;
+  column-gap: 10px;
+}
+
+.name-email-container :nth-child(2) {
+  margin-right: 20px;
 }
 
 @media (max-width: 992px) {
@@ -107,6 +111,108 @@ label[for="no-newsletter"] {
     width: 100%;
   }
 }
+
+.product-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+.product-images {
+  display: flex;
+  align-items: center;
+  width: calc(60% - 40px);
+  flex: 1 1 60%;
+  margin-left: 5%;
+}
+
+.product-images img {
+  width: 24%;
+  height: auto;
+  max-width: 330px;  
+  margin: 0 10%;
+}
+
+.small-images {
+  flex: 1 1 40%;
+  width: 5%;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.small-images img {
+  width: 20px;
+  margin-bottom: 10px;
+  flex-direction: row;
+}
+
+.product-details {
+  padding: 0 20px;
+  text-align: center;
+  width: 40%; 
+}
+
+.breadcrumbs {
+  list-style: none;
+  margin: 10px;
+  padding-left: 10%;
+}
+
+.breadcrumbs li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  float: left;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .05em;
+  line-height: 20px;
+  color: #e6cfcf;
+}
+
+.breadcrumbs li a {
+  display: block;
+  padding: 0 40px 0 0px;
+  text-decoration: none;
+  height: 20px;
+  position: relative;
+  perspective: 700px;
+}
+
+.breadcrumbs li a:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-color: #e6cfcf;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
   
+  -webkit-backface-visibility: hidden;
+  outline: 1px solid transparent;
+  
+  position: absolute;
+  right: 20px;
+  -webkit-transition: all .15s ease;
+     -moz-transition: all .15s ease;
+      -ms-transition: all .15s ease;
+          transition: all .15s ease;
+  -webkit-transform: rotateZ(45deg) skew(10deg, 10deg);
+     -moz-transform: rotateZ(45deg) skew(10deg, 10deg);
+      -ms-transform: rotateZ(45deg) skew(10deg, 10deg);
+          transform: rotateZ(45deg) skew(10deg, 10deg);
+}
 
 
+.breadcrumbs li a:hover:after {
+  right: 15px;
+  -webkit-transform: rotateZ(45deg) skew(-10deg, -10deg);
+     -moz-transform: rotateZ(45deg) skew(-10deg, -10deg);
+      -ms-transform: rotateZ(45deg) skew(-10deg, -10deg);
+          transform: rotateZ(45deg) skew(-10deg, -10deg);
+}
