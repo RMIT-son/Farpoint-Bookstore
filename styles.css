@@ -479,6 +479,29 @@ html {
   overflow: auto;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5% 10%;
+}
+
+section .title {
+  font-size: 50px;
+}
+
+#slogan {
+  font-family: 'Tilt Neon', cursive;
+  color: #e6cfcf;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 10%;
+  position: relative;
+  display: inline-block;
+  font-style: italic;
+}
+
+
 #stars {
   width: 1px;
   height: 1px;

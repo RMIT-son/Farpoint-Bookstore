@@ -51,67 +51,43 @@
 
   <div class="product-container">
     <div class="product-images">
-      <img src="../../images/books/dune/dune-main.png" alt="Big Image">
+      <div class="big-image">
+        <img src="../../images/books/dune/dune-main.png" alt="Dune Main Cover Page">
+      </div>
       <div class="small-images">
-        <img src="../../images/books/dune/dune-main.png" alt="Small Image 1">
-        <img src="../../images/books/dune/dune-main.png" alt="Small Image 2">
-        <img src="../../images/books/dune/dune-main.png" alt="Small Image 3">
+        <img src="../../images/books/dune/dune-1.webp" alt="Dune Alternate Cover Page 1">
+        <img src="../../images/books/dune/dune-2.webp" alt="Dune Alternate Cover Page 2">
+        <img src="../../images/books/dune/dune-3.webp" alt="Dune Alternate Cover Page 3">
       </div>
     </div>
     <div class="product-details">
-        <p>Price: $42.42</p>
-        <button class="addtocart">
-          <div class="pretext">
-            <i class="fas fa-cart-plus"></i> ADD TO CART
-          </div>
-          
-          <div class="pretext done">
-            <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
-          </div>
-          
-        </button>
+      <h1>Price:</h1>
+      <h1>$42.00</h1>
+      <button class="addtocart">
+        ADD TO CART
+      </button>
     </div>
   </div>
-
+  
   <div class="book-info">
     <h1>Dune</h1>
     <h4>by Frank Herbert</h4>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eos totam quis ducimus amet optio quibusdam! Dolor cumque excepturi, odio dolore nemo quam sapiente repudiandae perferendis. Officia aperiam est beatae.
+      Frank Herbert's 1965 science fiction novel Dune follows Ducal heir Paul Atreides during his rise to power on the futuristic desert world Arrakis, the only known source of the potent and dangerous spice melange. On Arrakis, Paul discovers that, for better or for worse, his actions may determine the fate of the universe.
     </p>
-
   </div>
-
 
   <footer>
     <div class="footer-container">
       <h3>&copy; 2023 Farpoint Bookstore. All rights reserved.</h3>
       <ul class="footer-links">
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Copyright</a></li>
-        <li><a href="#">Terms</a></li>
+        <li><a href="../../about.html">About Us</a></li>
+        <li><a href="../../privacy.html">Privacy Policy</a></li>
+        <li><a href="../../copyright.html">Copyright</a></li>
+        <li><a href="../../terms.html">Terms</a></li>
         <li><a href="../../contact.html">Contact Us</a></li>
       </ul>
     </div>
   </footer>
 </body>
-
-<script>
-  const button = document.querySelector(".addtocart");
-const done = document.querySelector(".done");
-console.log(button);
-let added = false;
-button.addEventListener('click',()=>{
-  if(added){
-    done.style.transform = "translate(-110%) skew(-40deg)";
-    added = false;
-  }
-  else{
-    done.style.transform = "translate(0px)";
-    added = true;
-  }
-    
-});
-</script>
 </html>
