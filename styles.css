@@ -17,6 +17,11 @@ html {
   overflow: auto;
 }
 
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 /* Styling Links */
 a {
   text-decoration: none;
