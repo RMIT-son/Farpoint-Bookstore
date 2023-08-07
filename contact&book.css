@@ -1,9 +1,22 @@
+/* 
+RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 1 - Static Website
+Author: Tang Trung Son 
+ID: s3978330
+Acknowledgement: https://github.com/MaximeVerdy/navbar-pure-css/tree/principale
+                 https://codepen.io/NazarAzhar/pen/QNzRZp
+                 https://codepen.io/arlekino/pen/nKOQav 
+*/
+
 /* Style the form labels */
 label {
   display: block;
   margin-bottom: 5px;
 }
 
+/* Container for labels with icons */
 .label-container,
 .label-container-rc {
   display: flex;
@@ -13,10 +26,12 @@ label {
   margin: 2% 0;
 }
 
+/* Custom styling for specific label */
 label[for="contact-purpose"] {
   width: 18%;
 }
 
+/* Styling for common form elements */
 textarea, 
 option,
 select {
@@ -40,11 +55,13 @@ textarea {
   font-size: 1.2em;
 }
 
+/* Custom styling for specific label */
 label[for="extra-notes"] {
   width: 12%;
   align-self: flex-start;
 }
 
+/* Custom styling for textarea with specific name */
 textarea[name="extra-notes"] {
   width: 100%;
 }
@@ -69,7 +86,7 @@ input[type="radio"] {
 /* Style the form submit and reset buttons */
 input[type="submit"],
 input[type="reset"] {
-  font-family:  "RaleWay", sans-serif;
+  font-family: "RaleWay", sans-serif;
   background-color: #f977ce;
   background-image: linear-gradient(315deg, #f977ce 0%, #c373f2 74%);
   color: white;
@@ -79,6 +96,7 @@ input[type="reset"] {
   cursor: pointer;
 }
 
+/* Button hover effect */
 input[type="submit"]:hover,
 input[type="reset"]:hover {
   background-color: #d387ab;
@@ -92,10 +110,10 @@ form {
   margin-bottom: 10px;
   padding: 50px;
   border-radius: 5px;
-  background-color: rgb(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Display the contact preference checkboxes and newsletter radios on the same line */
+/* Display contact preference checkboxes and newsletter radios inline */
 label[for="email-preference"],
 label[for="phone-preference"],
 label[for="yes-newsletter"],
@@ -104,7 +122,7 @@ label[for="no-newsletter"] {
   margin-right: 10px;
 }
 
-/* Display the name and email labels on the same line */
+/* Display name and email labels on the same line */
 .name-email-container {
   display: flex;
   flex-direction: row;
@@ -112,17 +130,20 @@ label[for="no-newsletter"] {
   column-gap: 10px;
 }
 
+/* Margin adjustment for second child in name-email-container */
 .name-email-container :nth-child(2) {
   margin-right: 20px;
 }
 
+/* Styling for product container */
 .product-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: rgb(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
+/* Styling for product images */
 .product-images {
   display: flex;
   align-items: center;
@@ -131,24 +152,26 @@ label[for="no-newsletter"] {
   margin-left: 5%;
 }
 
+/* Styling for individual product images */
 .product-images img {
-  width: 30%;
+  width: 40%;
   height: fit-content;
-  max-width: 330px;  
+  max-width: 330px;
   margin: 0 10%;
   border-radius: 10px;
 }
 
+/* Styling for small product images */
 .small-images {
   flex: 1 1 60%;
   width: 8%;
   height: auto;
   display: flex;
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
+/* Styling for the large product image container */
 .big-image {
   display: flex;
   width: 100%;
@@ -158,22 +181,26 @@ label[for="no-newsletter"] {
   align-items: center;
 }
 
+/* Styling for small product images */
 .small-images img {
   width: 20%;
   margin: 2% 0;
 }
 
+/* Hover effect for product images */
 .product-images img:hover {
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: all 0.1s ease-in-out;
 }
 
+/* Styling for product details */
 .product-details {
   padding: 0 20px;
   width: 50%;
 }
 
+/* Styling for product title */
 .product-details h1 {
   font-family: "Tilt Neon", cursive;
   font-size: 2.5em;
@@ -182,24 +209,28 @@ label[for="no-newsletter"] {
   justify-self: center;
 }
 
+/* Styling for book information container */
 .book-info {
   display: flex;
   flex-direction: column;
   margin: 0 10%;
 }
 
+/* Styling for book information paragraphs */
 .book-info p {
   margin: 2% 0;
   font-family: "Raleway", sans-serif;
   font-size: 1.2em;
 }
 
+/* Styling for book information headings */
 .book-info h4 {
   margin: 0;
 }
 
-.addtocart{
-  display:flex;
+/* Styling for add to cart button */
+.addtocart {
+  display: flex;
   background-color: #ee8c68;
   background-image: linear-gradient(315deg, #ee8c68 0%, #eb6b9d 74%);
   color: white;
@@ -209,17 +240,20 @@ label[for="no-newsletter"] {
   border: none;
 }
 
-.addtocart:hover{
-  transform:scale(1.1);
+/* Hover effect for add to cart button */
+.addtocart:hover {
+  transform: scale(1.1);
   transition: all 0.1s ease-in-out;
 }
 
+/* Styling for breadcrumbs */
 .breadcrumbs {
   list-style: none;
   margin: 10px;
   padding-left: 10%;
 }
 
+/* Styling for breadcrumb list items */
 .breadcrumbs li {
   list-style: none;
   margin: 0;
@@ -229,11 +263,12 @@ label[for="no-newsletter"] {
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   line-height: 20px;
   color: #e6cfcf;
 }
 
+/* Styling for breadcrumb links */
 .breadcrumbs li a {
   display: block;
   padding: 0 40px 0 0px;
@@ -243,6 +278,7 @@ label[for="no-newsletter"] {
   perspective: 700px;
 }
 
+/* Styling for breadcrumb arrow */
 .breadcrumbs li a:after {
   content: '';
   width: 20px;
@@ -252,46 +288,45 @@ label[for="no-newsletter"] {
   border-width: 1px 1px 0 0;
   
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   outline: 1px solid transparent;
   
   position: absolute;
   right: 20px;
-  -webkit-transition: all .15s ease;
-     -moz-transition: all .15s ease;
-      -ms-transition: all .15s ease;
-          transition: all .15s ease;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -ms-transition: all 0.15s ease;
+  transition: all 0.15s ease;
   -webkit-transform: rotateZ(45deg) skew(10deg, 10deg);
-     -moz-transform: rotateZ(45deg) skew(10deg, 10deg);
-      -ms-transform: rotateZ(45deg) skew(10deg, 10deg);
-          transform: rotateZ(45deg) skew(10deg, 10deg);
+  -moz-transform: rotateZ(45deg) skew(10deg, 10deg);
+  -ms-transform: rotateZ(45deg) skew(10deg, 10deg);
+  transform: rotateZ(45deg) skew(10deg, 10deg);
 }
 
-
+/* Hover effect for breadcrumb arrow */
 .breadcrumbs li a:hover:after {
   right: 15px;
   -webkit-transform: rotateZ(45deg) skew(-10deg, -10deg);
-     -moz-transform: rotateZ(45deg) skew(-10deg, -10deg);
-      -ms-transform: rotateZ(45deg) skew(-10deg, -10deg);
-          transform: rotateZ(45deg) skew(-10deg, -10deg);
+  -moz-transform: rotateZ(45deg) skew(-10deg, -10deg);
+  -ms-transform: rotateZ(45deg) skew(-10deg, -10deg);
+  transform: rotateZ(45deg) skew(-10deg, -10deg);
 }
 
-
+/* Media query for responsive design */
 @media only screen and (max-width: 992px) {
   form {
     width: auto;
   }
 
   .label-container {
-    display: grid
+    display: grid;
   }
   
   label[for="contact-purpose"] {
     width: 100%;
   }
 
-  .label-container-rc{
+  .label-container-rc {
     display: block;
   }
 
@@ -302,8 +337,8 @@ label[for="no-newsletter"] {
   .name-email-container {
     display: grid;
     flex-direction: column;
-
   }
+
   input[type="text"],
   input[type="email"],
   textarea {
@@ -344,7 +379,7 @@ label[for="no-newsletter"] {
     flex-direction: row;
     width: 100%;
     justify-content: center;
-    gap: 2%
+    gap: 2%;
   }
 
   .product-details {

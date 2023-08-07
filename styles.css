@@ -1,8 +1,29 @@
+/* 
+RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 1 - Static Website
+Author: Tang Trung Son 
+ID: s3978330
+Acknowledgement: https://github.com/MaximeVerdy/navbar-pure-css/tree/principale
+                 https://codepen.io/NazarAzhar/pen/QNzRZp
+                 https://codepen.io/arlekino/pen/nKOQav 
+*/
+
+/* Styling html bg */
+html {
+  background: linear-gradient(114.95deg, rgba(235, 0, 255, 0.5) 0%, rgba(0, 71, 255, 0) 34.35%), linear-gradient(180deg, #004B5B 0%, #FFA7A7 100%), linear-gradient(244.35deg, #FFB26A 0%, #3676B1 50.58%, #00A3FF 100%), linear-gradient(244.35deg, #FFFFFF 0%, #004A74 49.48%, #FF0000 100%), radial-gradient(100% 233.99% at 0% 100%, #B70000 0%, rgb(174, 0, 255) 100%), linear-gradient(307.27deg, #219D87 0.37%, #2650BA 50.19%, #2800C6 100%), radial-gradient(100% 140% at 100% 0%, #FF00C7 0%, #006C7A 49.48%, #760000 100%);
+  background-blend-mode: hard-light, overlay, overlay, overlay, difference, difference, normal;
+  overflow: auto;
+}
+
+/* Styling Links */
 a {
   text-decoration: none;
   color: #e6cfcf;
 }
 
+/* Styling Logo */
 h1.logo {
   color: #e6cfcf;
   font-weight: normal;
@@ -14,10 +35,12 @@ h1.logo {
   vertical-align: middle;
 }
 
-img {
+.logo img {
   width: 50px;
   height: 50px;
 }
+
+/* Styling header */
 
 header {
   font-family: 'Tilt Neon', cursive;
@@ -26,6 +49,20 @@ header {
   z-index: 999;
   width: 100%;
 }
+
+/* Styling General Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  color: #e6cfcf;
+}
+
+/* Styling Nav Bar and Burger */
 
 .nav-toggle {
   position: absolute !important;
@@ -46,6 +83,8 @@ header {
   display: flex;
   align-items: center;
 }
+
+/* Setting up Burger Spans */
 
 .nav-toggle-label span::before {
   display: block;
@@ -148,66 +187,6 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 768px) {
-  .nav-toggle-label {
-       display: none;
-  }
-
-  header {
-       display: grid;
-       grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-  }
-
-  .logo {
-       grid-column: 2 / 3;
-  }
-
-  nav {
-       position: relative;
-       text-align: left;
-       transition: none;
-       transform: scale(1, 1);
-       background: none;
-       top: initial;
-       left: initial;
-       grid-column: 3 / 4;
-       display: flex;
-       justify-content: flex-end;
-       align-items: center;
-  }
-
-  nav ul {
-       display: flex;
-  }
-
-  nav li {
-       margin-left: 3em;
-       margin-bottom: 0;
-  }
-
-  nav a {
-       opacity: 1;
-       position: relative;
-  }
-
-  nav a::before {
-       content: '';
-       display: block;
-       height: 5px;
-       background: #e6cfcf ;
-       position: absolute;
-       bottom: -.75em;
-       left: 0;
-       right: 0;
-       transform: scale(0, 1);
-       border-radius: 5px;
-       transition: transform ease-in-out 250ms;
-  }
-
-  nav a:hover::before {
-       transform: scale(1, 1);
-  }
-}
 /* Animate the burger icon to a close icon when the menu is open */
 .nav-toggle:checked ~ .nav-toggle-label span{
   background: transparent;
@@ -226,22 +205,191 @@ nav a:hover {
   left: 10%;
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px){
-  nav {
-    padding-right: 2em;
-    width: auto;
-  }
+/* Styles for the "hamburger menu" on mobile */
+.burger {
+  display: none;
+  cursor: pointer;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Raleway', sans-serif;
+.burger .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: transform 0.3s;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Styling boxes for books in cate and sub cate pages */
+.book-box {
+  padding: 20px;
+  margin: 20px 0;
+  display: flexbox;
+  text-align: center;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.book-box h1 {
+  font-family: 'Tilt Neon', cursive;
+  color: #e6cfcf;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.book-box h1::before {
+  content: '';
+  display: grid;
+  height: 5px;
+  background: #e6cfcf;
+  position: absolute;
+  bottom: 0em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  border-radius: 5px;
+  transition: transform ease-in-out 250ms;
+}
+
+.book-box h1:hover::before {
+  transform: scale(1, 1);
+}
+
+.book-item {
+  width: calc(33.33% - 40px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.book-item img {
+  width: 50%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.book-item:hover img {
+  transform: translateY(-20px);
+}
+
+.book-item a { 
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Styling embedded video */
+.video-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Styling for the footer pages */
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5% 10%;
+}
+
+section .title {
+  font-size: 50px;
+}
+
+/* Styling for the footer */
+footer {
+  display: grid;
+  font-family: 'Tilt Neon', cursive;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer h3 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-left: 30px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: flex-end;
+  justify-self: flex-end;
+  list-style: none;
+  margin-left: auto;
+}
+
+
+.footer-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-links li:last-child {
+  margin-right: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #b586ef;
+}
+
+/* Styling for Slogan in about us page */
+#slogan {
+  font-family: 'Tilt Neon', cursive;
   color: #e6cfcf;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 10%;
+  position: relative;
+  display: inline-block;
+  font-style: italic;
 }
 
 
@@ -311,197 +459,78 @@ body {
   }
 }
 
-/* Styles for the "hamburger menu" on mobile */
-.burger {
-  display: none;
-  cursor: pointer;
+/* Responsive nav bar for medium up screens */
+@media screen and (min-width: 768px) {
+  .nav-toggle-label {
+       display: none;
+  }
+
+  header {
+       display: grid;
+       grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logo {
+       grid-column: 2 / 3;
+  }
+
+  nav {
+       position: relative;
+       text-align: left;
+       transition: none;
+       transform: scale(1, 1);
+       background: none;
+       top: initial;
+       left: initial;
+       grid-column: 3 / 4;
+       display: flex;
+       justify-content: flex-end;
+       align-items: center;
+  }
+
+  nav ul {
+       display: flex;
+  }
+
+  nav li {
+       margin-left: 3em;
+       margin-bottom: 0;
+  }
+
+  nav a {
+       opacity: 1;
+       position: relative;
+  }
+
+  nav a::before {
+       content: '';
+       display: block;
+       height: 5px;
+       background: #e6cfcf ;
+       position: absolute;
+       bottom: -.75em;
+       left: 0;
+       right: 0;
+       transform: scale(0, 1);
+       border-radius: 5px;
+       transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+       transform: scale(1, 1);
+  }
 }
 
-.burger .bar {
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-  margin: 6px 0;
-  transition: transform 0.3s;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-
-.nav-links li {
-  margin-left: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-}
-
-.book-box {
-  padding: 20px;
-  margin: 20px 0;
-  display: flexbox;
-  text-align: center;
-}
+/* Extra nav padding for tablets */
+@media screen and (min-width: 768px) and (max-width: 992px){
+  nav {
+    padding-right: 2em;
+    width: auto;
+  }
+} 
 
 
-
-.book-list {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-.book-box h1 {
-  font-family: 'Tilt Neon', cursive;
-  color: #e6cfcf;
-  font-size: 40px;
-  font-weight: normal;
-  text-align: center;
-  margin-bottom: 20px;
-  position: relative;
-  display: inline-block;
-}
-
-.book-box h1::before {
-  content: '';
-  display: grid;
-  height: 5px;
-  background: #e6cfcf;
-  position: absolute;
-  bottom: 0em;
-  left: 0;
-  right: 0;
-  transform: scale(0, 1);
-  border-radius: 5px;
-  transition: transform ease-in-out 250ms;
-}
-
-.book-box h1:hover::before {
-  transform: scale(1, 1);
-}
-
-.book-item {
-  width: calc(33.33% - 40px);
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.book-item img {
-  width: 50%;
-  height: auto;
-  border-radius: 15px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.book-item:hover img {
-  transform: translateY(-20px);
-}
-
-.book-item a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.video-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-footer {
-  display: grid;
-  font-family: 'Tilt Neon', cursive;
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  margin-top: auto;
-}
-
-.footer-container {
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.footer {
-  display: flex;
-  justify-content: flex-end;
-}
-
-footer h3 {
-  font-size: 20px;
-  font-weight: normal;
-  margin-left: 30px;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: flex-end;
-  justify-self: flex-end;
-  list-style: none;
-  margin-left: auto;
-}
-
-
-.footer-links li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.footer-links li:last-child {
-  margin-right: 20px;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 14px;
-  transition: color 0.3s;
-}
-
-.footer-links a:hover {
-  color: #b586ef;
-}
-
-html {
-  background: linear-gradient(114.95deg, rgba(235, 0, 255, 0.5) 0%, rgba(0, 71, 255, 0) 34.35%), linear-gradient(180deg, #004B5B 0%, #FFA7A7 100%), linear-gradient(244.35deg, #FFB26A 0%, #3676B1 50.58%, #00A3FF 100%), linear-gradient(244.35deg, #FFFFFF 0%, #004A74 49.48%, #FF0000 100%), radial-gradient(100% 233.99% at 0% 100%, #B70000 0%, rgb(174, 0, 255) 100%), linear-gradient(307.27deg, #219D87 0.37%, #2650BA 50.19%, #2800C6 100%), radial-gradient(100% 140% at 100% 0%, #FF00C7 0%, #006C7A 49.48%, #760000 100%);
-  background-blend-mode: hard-light, overlay, overlay, overlay, difference, difference, normal;
-  overflow: auto;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  margin: 2.5% 10%;
-}
-
-section .title {
-  font-size: 50px;
-}
-
-#slogan {
-  font-family: 'Tilt Neon', cursive;
-  color: #e6cfcf;
-  font-size: 40px;
-  font-weight: normal;
-  text-align: center;
-  margin-bottom: 10%;
-  position: relative;
-  display: inline-block;
-  font-style: italic;
-}
-
-
+/* Stars creation */
 #stars {
   width: 1px;
   height: 1px;
@@ -1058,27 +1087,7 @@ section .title {
     1027px 1402px #fff, 1542px 1100px #fff;
 }
 
-#title {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  color: #fff;
-  text-align: center;
-  font-family: "lato", sans-serif;
-  font-weight: 300;
-  font-size: 50px;
-  letter-spacing: 10px;
-  margin-top: -60px;
-  padding-left: 10px;
-}
-
-#title span {
-  background: -webkit-linear-gradient(white, #38495a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
+/* Stars Animation */
 @keyframes animStar {
   from {
     transform: translateY(0px);
