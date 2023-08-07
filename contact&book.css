@@ -4,6 +4,26 @@ label {
   margin-bottom: 5px;
 }
 
+.label-container,
+.label-container-rc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+  margin: 2% 0;
+}
+
+label[for="contact-purpose"] {
+  width: 18%;
+}
+
+textarea, 
+option,
+select {
+  font-family: "RaleWay", sans-serif;
+  font-size: 0.8em;
+}
+
 /* Style the form inputs */
 input[type="text"],
 input[type="email"],
@@ -16,6 +36,13 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
   margin-bottom: 10px;
+  font-family: "RaleWay", sans-serif;
+  font-size: 1.2em;
+}
+
+label[for="extra-notes"] {
+  width: 12%;
+  align-self: flex-start;
 }
 
 textarea[name="extra-notes"] {
@@ -24,7 +51,6 @@ textarea[name="extra-notes"] {
 
 /* Style the form select */
 select {
-  display: block;
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -88,28 +114,6 @@ label[for="no-newsletter"] {
 
 .name-email-container :nth-child(2) {
   margin-right: 20px;
-}
-
-@media (max-width: 992px) {
-  form {
-    width: auto;
-  }
-  .name-email-container {
-    display: grid;
-    flex-direction: column;
-
-  }
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-  }
-
-  input[type="submit"],
-  input[type="reset"] {
-    margin-top: 8px;
-    width: 100%;
-  }
 }
 
 .product-container {
@@ -248,6 +252,8 @@ label[for="no-newsletter"] {
   border-width: 1px 1px 0 0;
   
   -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          backface-visibility: hidden;
   outline: 1px solid transparent;
   
   position: absolute;
@@ -273,7 +279,43 @@ label[for="no-newsletter"] {
 
 
 @media only screen and (max-width: 992px) {
+  form {
+    width: auto;
+  }
+
+  .label-container {
+    display: grid
+  }
   
+  label[for="contact-purpose"] {
+    width: 100%;
+  }
+
+  .label-container-rc{
+    display: block;
+  }
+
+  label[for="extra-notes"] {
+    width: 100%;
+  }
+
+  .name-email-container {
+    display: grid;
+    flex-direction: column;
+
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    margin-top: 8px;
+    width: 100%;
+  }
+
   .breadcrumbs {
     display: flex;
     flex-direction: row;

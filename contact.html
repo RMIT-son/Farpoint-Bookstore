@@ -47,12 +47,13 @@
   </header>
 
   <form method="post">
-  <label for="contact-purpose">Contact Purpose:</label>
-  <select id="contact-purpose" name="contact-purpose">
-    <option value="sell-books">I want to sell books</option>
-    <option value="buy-books">I want to buy books</option>
-  </select>
-  <br>
+  <div class="label-container">
+    <label for="contact-purpose">Contact Purpose:</label>
+    <select id="contact-purpose" name="contact-purpose">
+      <option value="sell-books">I want to sell books</option>
+      <option value="buy-books">I want to buy books</option>
+    </select>
+  </div>
 
   <div class="name-email-container">
     <label for="name" id="name">Name:</label>
@@ -60,30 +61,33 @@
     <label for="email" id="email">Email:</label>
     <input type="email" id="email" name="email" required>
   </div>
-  <br>
 
-  <label for="phone">Phone:</label>
-  <input type="tel" id="phone" name="phone" required>
-  <br>
+  <div class="label-container">
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required>
+  </div>
+  
+  <div class="label-container-rc">
+    <label>Contact Preference:</label>
+    <input type="checkbox" id="email-preference" name="contact-preference[]" value="email" checked>
+    <label for="email-preference">By email</label>
+    <input type="checkbox" id="phone-preference" name="contact-preference[]" value="phone">
+    <label for="phone-preference">By phone</label>
+  </div>
 
-  <label>Contact Preference:</label>
-  <input type="checkbox" id="email-preference" name="contact-preference[]" value="email" checked>
-  <label for="email-preference">By email</label>
-  <input type="checkbox" id="phone-preference" name="contact-preference[]" value="phone">
-  <label for="phone-preference">By phone</label>
-  <br>
-  <br>
-
+  <div class="label-container-rc">
   <label>Receive weekly newsletter:</label>
   <input type="radio" id="yes-newsletter" name="newsletter" value="yes" checked>
   <label for="yes-newsletter">Yes</label>
   <input type="radio" id="no-newsletter" name="newsletter" value="no">
   <label for="no-newsletter">No</label>
-  <br>
-  <br>
+  </div>
 
-  <label for="extra-notes">Extra Notes:</label>
-  <textarea id="extra-notes" name="extra-notes" rows="4" cols="50"></textarea>
+
+  <div class="label-container">
+    <label for="extra-notes">Extra Notes:</label>
+    <textarea id="extra-notes" name="extra-notes" rows="4" cols="50"></textarea>
+  </div>
   <input type="submit" value="Submit">
   <input type="reset" value="Reset">
   </form>
