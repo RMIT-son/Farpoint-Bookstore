@@ -17,10 +17,18 @@ html {
   overflow: auto;
 }
 
+/* Styling general paragraphs */
 p {
   text-align: justify;
   text-justify: inter-word;
 }
+
+/* Paragraph in book boxes stay centered */
+.book-box p {
+  text-align: center;
+}
+
+
 
 /* Styling Links */
 a {
