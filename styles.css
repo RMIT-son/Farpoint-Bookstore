@@ -458,7 +458,7 @@ footer h3 {
   }
 
   .book-item img {
-    width: 80% !important;
+    width: 40vh !important;
     height: auto;
     justify-self: center;
   }
