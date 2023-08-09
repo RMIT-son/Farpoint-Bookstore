@@ -28,8 +28,6 @@ p {
   text-align: center;
 }
 
-
-
 /* Styling Links */
 a {
   text-decoration: none;
@@ -318,11 +316,15 @@ nav a:hover {
 /* Styling embedded video */
 .video-box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  margin-bottom: 12px;
+  align-items: center;
+  margin: 20px 20px;
+  max-height: 500px;
+}
+
+.video-box iframe {
+  max-width: 100%; /* Set a maximum width for the iframe */
+  max-height: 100%;
 }
 
 /* Styling for the footer pages */
@@ -531,6 +533,11 @@ footer h3 {
 
   nav a:hover::before {
        transform: scale(1, 1);
+  }
+
+  .video-box iframe {
+    width: 560px;
+    height: 315px;
   }
 }
 
